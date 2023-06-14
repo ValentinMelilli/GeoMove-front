@@ -35,7 +35,7 @@ declare module 'api_response' {
     export type User = {
         id?: number
         name: string
-        email: string
+        email?: string
         birthdate?: string
         profilePicture?: string
         owner?: Owner

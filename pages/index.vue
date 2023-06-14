@@ -7,6 +7,7 @@
 </template>
 
 <script lang="ts" setup>
+import { Structure } from 'api_response'
 import "leaflet/dist/leaflet.css"
 import { LMap, LTileLayer } from "@vue-leaflet/vue-leaflet";
 
@@ -15,9 +16,9 @@ let map = ref();
 const { data } = await useAsyncData('structures', async () => {
     let structures : any = [];
     const runtimeConfig = useRuntimeConfig()
-    const fetch = await $fetch(runtimeConfig.apiURL + '/structures', { method: 'GET' }) as any;
+    const fetch = await $fetch(runtimeConfig.apiURL + '/structures', { method: 'GET' }) as Structure[];
 
-    fetch.forEach((structure : any) => {
+    fetch.forEach((structure) => {
         let coord = structure.coord.split(',');
         structures.push({
             name: structure.name,

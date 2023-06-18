@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen">
+    <div class="w-full h-[500px]">
         <l-map :useGlobalLeaflet="false" :zoom="13" :center="[43.613599, 3.873309]" ref="map" :options="{ zoomControl: false }">
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
             <l-control-zoom position="bottomleft"></l-control-zoom>

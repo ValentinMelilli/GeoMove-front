@@ -1,0 +1,1 @@
+<template><img src="/le-rugby.svg"></template>

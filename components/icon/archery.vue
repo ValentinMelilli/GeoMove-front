@@ -1,0 +1,1 @@
+<template><img src="/arc-et-des-fleches.svg"></template>

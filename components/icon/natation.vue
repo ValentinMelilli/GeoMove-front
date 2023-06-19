@@ -1,0 +1,1 @@
+<template><img src="/la-natation.svg"></template>

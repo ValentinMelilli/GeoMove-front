@@ -1,0 +1,1 @@
+<template><img src="/cadenas-ouvert.svg"></template>

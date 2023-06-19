@@ -1,0 +1,1 @@
+<template><img src="/kayak.svg"></template>

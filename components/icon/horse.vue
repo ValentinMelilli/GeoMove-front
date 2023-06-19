@@ -1,0 +1,1 @@
+<template><img src="/cheval.svg"></template>

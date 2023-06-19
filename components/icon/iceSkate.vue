@@ -1,0 +1,1 @@
+<template><img src="/patin-a-glace.svg"></template>

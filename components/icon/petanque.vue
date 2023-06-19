@@ -1,0 +1,1 @@
+<template><img src="/petanque.svg"></template>

@@ -1,0 +1,1 @@
+<template><img src="/nage-synchronisee.svg"></template>

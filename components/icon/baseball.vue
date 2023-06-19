@@ -1,0 +1,1 @@
+<template><img src="/balle-de-baseball.svg"></template>

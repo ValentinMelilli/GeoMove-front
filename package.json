@@ -13,9 +13,12 @@
     "@nuxtjs/tailwindcss": "^6.7.2",
     "@types/leaflet": "^1.9.3",
     "@types/node": "^18",
-    "nuxt": "^3.5.2"
+    "nuxt": "^3.5.2",
+    "nuxt-swiper": "^1.1.0"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/typography": "^0.5.9",
     "@vue-leaflet/vue-leaflet": "^0.9.0",
     "leaflet": "^1.9.4"
   }

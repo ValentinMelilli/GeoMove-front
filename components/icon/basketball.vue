@@ -1,0 +1,1 @@
+<template><img src="/ballon-de-basket.svg"></template>

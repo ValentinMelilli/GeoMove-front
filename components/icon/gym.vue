@@ -1,0 +1,1 @@
+<template><img src="/equipement-de-gym.svg"></template>

@@ -10,18 +10,22 @@
 <script lang="ts" setup>
 import "leaflet/dist/leaflet.css"
 import { LControlZoom, LMap, LTileLayer } from "@vue-leaflet/vue-leaflet";
+const emit = defineEmits(['marker-click']);
 
 let map = ref();
 
-/*const { data } = await useFetch('/api/structures', { method: 'GET' });
+const { data } = await useFetch('/api/structures', { method: 'GET' });
 
 onMounted(async () => {
     const { marker } = await import('leaflet');
 
     data?.value?.forEach((structure : any) => {
-        marker(structure.coord)
+        const m: any = marker(structure.coord)
         .addTo(map.value.leafletObject)
-        .bindPopup(`<b>${structure.name}</b><br>${structure.address}<br>${structure.phone}<br>${structure.email}<br>${structure.website}`);
+        /*.bindPopup(`<b>${structure.name}</b><br>${structure.address}<br>${structure.phone}<br>${structure.email}<br>${structure.website}`);*/
+        m.on('click', function(e) {
+            emit('marker-click', structure);
+        });
     });
-})*/
+})
 </script>

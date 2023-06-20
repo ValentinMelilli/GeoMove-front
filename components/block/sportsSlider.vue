@@ -17,6 +17,7 @@
 </template>
 
 <script lang="ts" setup>
+
 const swiper = useSwiper()
 
 const sports: any = {

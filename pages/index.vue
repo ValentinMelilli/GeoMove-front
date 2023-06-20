@@ -3,12 +3,6 @@
         <BlockFilters />
         <BlockSportsSlider />
         <UISearchSmall />
-        <BlockMap @marker-click="test" />
+        <BlockMap />
     </div>
 </template>
-
-<script lang="ts" setup>
-function test(data: any) {
-    console.log(data);
-}
-</script>

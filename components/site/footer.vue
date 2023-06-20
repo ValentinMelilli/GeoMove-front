@@ -30,7 +30,7 @@
     </div>
 </template>
 
-<style scope="postcss">
+<style>
 .footer {
     translate: 0 -3rem;
 }

@@ -13,7 +13,6 @@
 <script lang="ts" setup>
 import "leaflet/dist/leaflet.css"
 import { LControlZoom, LMap, LTileLayer } from "@vue-leaflet/vue-leaflet";
-//const emit = defineEmits(['marker-click']);
 
 let map = ref();
 let showModal = ref(false);
@@ -25,9 +24,8 @@ async function createMarkers() {
     const { marker } = await import('leaflet');
 
     data?.value?.forEach((structure : any) => {
-        const m: any = marker(structure.coord)
-        .addTo(map?.value?.leafletObject);
-        /*.bindPopup(`<b>${structure.name}</b><br>${structure.address}<br>${structure.phone}<br>${structure.email}<br>${structure.website}`);*/
+        const m: any = marker(structure.coord).addTo(map?.value?.leafletObject);
+
         m.on('click', function(e: any) {
             showModal.value = true;
             selectedStructure.value = structure;

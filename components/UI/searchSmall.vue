@@ -5,7 +5,7 @@
     </div>
 </template>
 
-<style scope="postcss">
+<style>
 .centered {
     position: absolute;
     left: 50%;

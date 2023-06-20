@@ -3,7 +3,7 @@
         <div class="p-4 w-full bg-accent-2 text-white flex flex-row rounded-t-3xl justify-center">
             {{ props?.blockData?.name }}
             <button class="ml-4">
-                <IconHeart class="h-6 fill-white" />
+                <IconHeart class="h-6 w-6 stroke-white" />
             </button>
         </div>
         <div class="p-4 w-full bg-white rounded-b-3xl">
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="w-fit mx-auto">
-                <a :href="'/structures/' + props?.blockData?.id" class="py-2 px-6 border-accent-2 border-2 rounded-full hover:border-primary hover:text-primary">Ça m'intéresse</a>
+                <NuxtLink :to="'/structures/' + props?.blockData?.id" class="py-2 px-6 border-accent-2 border-2 rounded-full duration-200 hover:border-primary hover:text-primary">Ça m'intéresse</NuxtLink>
             </div>
             
         </div>

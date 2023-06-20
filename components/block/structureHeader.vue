@@ -3,7 +3,7 @@
         <div class="mr-[100px]">
             <div class="ml-[6rem]">
                 <button class="absolute">
-                    <IconHeart class="h-6" />
+                    <IconHeart class="h-6 w-6" />
                 </button>
             </div>
             <UIProfilePicture :src="props.blockData.image" alt="Profile picture" />
@@ -12,7 +12,7 @@
             <h1 class="flex flex-row text-xl">
                 {{ props.blockData.name }}
                 <button class="ml-4">
-                    <IconMenu class="h-6" />
+                    <IconMenu class="h-6 w-6" />
                 </button>
             </h1>
             <a :href="props.blockData.website" target="_blank" class="underline">
@@ -21,15 +21,15 @@
             <UIRating :rating="props.blockData.rating" />
             <div class="flex flex-row">
                 <div class="flex flex-row items-center">
-                    <IconPadlockOpen class="h-5 mr-1" />
+                    <IconPadlockOpen class="h-5 w-5 mr-1" />
                     Accès libre
                 </div>
             </div>
         </div>
         <div>
             <div class="flex flex-row justify-end mb-2">
-                <IconBadgeVerified class="h-10 mr-2" />
-                <IconBadgeSponsored class="h-10" />
+                <IconBadgeVerified class="h-10 w-10 mr-2" />
+                <IconBadgeSponsored class="h-10 w-10" />
             </div>
             <UIButtonCTA text="Contacter" />
         </div>

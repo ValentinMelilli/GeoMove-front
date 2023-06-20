@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-auto rounded-t-3xl bg-accent-2 px-20 py-8 pt-12 text-gray-300">
+    <div class="mt-auto rounded-t-3xl bg-accent-2 px-20 py-8 pt-12 text-gray-300 footer z-[10000]">
         <div class="flex flex-row">
             <div class="flex flex-row">
                 <a href="#">Foire aux questions</a>
@@ -14,13 +14,13 @@
             </div>
             <div class="flex flex-row ml-auto">
                 <a href="#" class="mx-4">
-                    <IconFacebook class="h-8" />
+                    <IconFacebook class="h-8 w-8" />
                 </a>
                 <a href="#" class="mx-4">
-                    <IconInstagram class="h-8" />
+                    <IconInstagram class="h-8 w-8" />
                 </a>
                 <a href="#" class="mx-4">
-                    <IconTwitter class="h-8" />
+                    <IconTwitter class="h-8 w-8" />
                 </a>
             </div>
         </div>
@@ -29,3 +29,9 @@
         </div>
     </div>
 </template>
+
+<style scope="postcss">
+.footer {
+    translate: 0 -3rem;
+}
+</style>

@@ -1,6 +1,8 @@
 <template>
     <div class="w-full h-[650px]">
-        <BlockStructureModal v-show="showModal" :blockData="selectedStructure" />
+        <Transition name="appear">
+            <BlockStructureModal v-show="showModal" :blockData="selectedStructure" class="right-20 top-1/2" />
+        </Transition>
         <l-map :useGlobalLeaflet="false" :zoom="13" :center="[43.613599, 3.873309]" ref="map" :options="{ zoomControl: false }">
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
             <l-control-zoom position="bottomleft"></l-control-zoom>
@@ -33,3 +35,19 @@ onMounted(async () => {
     });
 })
 </script>
+
+<style scoped lang="postcss">
+.appear-enter-active,
+.appear-leave-active {
+  transition: all 0.2s ease;
+}
+
+.appear-enter-from,
+.appear-leave-to {
+  opacity: 0;
+}
+
+.leaflet-control-zoom {
+    translate: 0 -64px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div>
         <BlockFilters />
         <BlockSportsSlider />
         <UISearchSmall />

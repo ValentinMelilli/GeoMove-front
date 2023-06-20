@@ -1,6 +1,6 @@
 <template>
     <div class="bg-accent-3 w-full py-20">
-        <div class="container m-auto">
+        <div class="container m-auto pb-12">
             <BlockStructureHeader :blockData="data" />
             <BlockStructureInfo :blockData="data" />
             <UISeparator />

@@ -1,5 +1,6 @@
 <template>
     <div class="w-full h-[650px]">
+        <BlockStructureModal v-show="showModal" :blockData="selectedStructure" />
         <l-map :useGlobalLeaflet="false" :zoom="13" :center="[43.613599, 3.873309]" ref="map" :options="{ zoomControl: false }">
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
             <l-control-zoom position="bottomleft"></l-control-zoom>
@@ -10,9 +11,11 @@
 <script lang="ts" setup>
 import "leaflet/dist/leaflet.css"
 import { LControlZoom, LMap, LTileLayer } from "@vue-leaflet/vue-leaflet";
-const emit = defineEmits(['marker-click']);
+//const emit = defineEmits(['marker-click']);
 
 let map = ref();
+let showModal = ref(false);
+let selectedStructure = ref({});
 
 const { data } = await useFetch('/api/structures', { method: 'GET' });
 
@@ -21,10 +24,11 @@ onMounted(async () => {
 
     data?.value?.forEach((structure : any) => {
         const m: any = marker(structure.coord)
-        .addTo(map.value.leafletObject)
+        .addTo(map.value.leafletObject);
         /*.bindPopup(`<b>${structure.name}</b><br>${structure.address}<br>${structure.phone}<br>${structure.email}<br>${structure.website}`);*/
-        m.on('click', function(e) {
-            emit('marker-click', structure);
+        m.on('click', function(e: any) {
+            showModal.value = true;
+            selectedStructure.value = structure;
         });
     });
 })

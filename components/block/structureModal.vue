@@ -1,15 +1,24 @@
 <template>
-    <section class="flex flex-row items-center my-10">
-        <div class="w-2/3">
-            <div class="bg-white rounded-xl p-4" v-html="getContent">
-            </div>
+    <div class="absolute z-[10000] w-1/4">
+        <div class="p-4 w-full bg-accent-2 text-white flex flex-row rounded-t-3xl justify-center">
+            {{ props?.blockData?.name }}
+            <button class="ml-4">
+                <IconHeart class="h-6 fill-white" />
+            </button>
         </div>
-        <div class="w-1/3 place-content-end flex flex-wrap">
-            <div v-for="(sport, i) in structureSports" class="m-2">
-                <component :is="sports[sport]" class="h-12 w-12" />
+        <div class="p-4 w-full bg-white rounded-b-3xl">
+            {{ props?.blockData?.address }}
+            <div class="flex flex-row justify-center m-4">
+                <div v-for="(sport, i) in structureSports" class="m-2">
+                    <component :is="sports[sport]" class="h-10 w-10" />
+                </div>
             </div>
+            <div class="w-fit mx-auto">
+                <a :href="'/structures/' + props?.blockData?.id" class="py-2 px-6 border-accent-2 border-2 rounded-full hover:border-primary hover:text-primary">Ça m'intéresse</a>
+            </div>
+            
         </div>
-    </section>
+    </div>
 </template>
 
 <script lang="ts" setup>
@@ -34,7 +43,7 @@ const sports: any = {
 const structureSports = computed(() => {
     let sports: string[] = [];
 
-    props.blockData.pricing.forEach((pricing: Pricing) => {
+    props?.blockData?.pricing?.forEach((pricing: Pricing) => {
         if (!sports.includes(pricing.sport.name)) {
             sports.push(pricing.sport.name);
         }
@@ -42,6 +51,4 @@ const structureSports = computed(() => {
 
     return sports;
 });
-
-const getContent = computed(() => props.blockData.description.replace(/\\n/g, "<br />"))
 </script>

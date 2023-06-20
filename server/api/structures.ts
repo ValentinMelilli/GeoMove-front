@@ -19,6 +19,7 @@ export default defineEventHandler(async event => {
                 data.forEach((structure: Structure) => {
                     let coord = structure.coord.split(',');
                     structures.push({
+                        id: structure.id,
                         name: structure.name,
                         description: structure.description,
                         address: `${structure.address}, ${structure.zip} ${structure.city}`,

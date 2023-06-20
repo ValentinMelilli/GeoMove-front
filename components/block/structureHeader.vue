@@ -6,7 +6,7 @@
                     <IconHeart class="h-6" />
                 </button>
             </div>
-            <img :src="props.blockData.image" alt="Profile picture" class="h-32 w-32 rounded-full bg-gray-300" />
+            <UIProfilePicture :src="props.blockData.image" alt="Profile picture" />
         </div>
         <div class="grow flex flex-col">
             <h1 class="flex flex-row text-xl">
@@ -31,9 +31,7 @@
                 <IconBadgeVerified class="h-10 mr-2" />
                 <IconBadgeSponsored class="h-10" />
             </div>
-            <button class="rounded-full py-2 px-6 bg-accent-2 text-white">
-                Contacter
-            </button>
+            <UIButtonCTA text="Contacter" />
         </div>
     </section>
 </template>

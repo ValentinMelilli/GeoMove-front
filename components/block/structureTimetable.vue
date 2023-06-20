@@ -83,13 +83,15 @@
 </template>
 
 <script lang="ts" setup>
+import { Timetable } from 'api_response';
+
 const props = defineProps(["blockData"]);
 const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 
 const timetable = computed(() => {
     let timetable: any = {};
 
-    props.blockData.timetable.forEach(time => {
+    props.blockData.timetable.forEach((time: Timetable) => {
         timetable[days[time.day]] = time;
     });
 

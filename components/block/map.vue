@@ -46,7 +46,9 @@ onMounted(async () => {
 .appear-leave-to {
   opacity: 0;
 }
+</style>
 
+<style>
 .leaflet-control-zoom {
     translate: 0 -64px;
 }

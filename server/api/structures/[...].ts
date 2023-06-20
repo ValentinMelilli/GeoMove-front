@@ -27,6 +27,7 @@ export default defineEventHandler(async event => {
                     website: data.website,
                     timetable: data.timetable,
                     pricing: data.pricing,
+                    gallery: data.gallery,
                     coord: coord,
                 };
             }

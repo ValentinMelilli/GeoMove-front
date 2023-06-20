@@ -6,6 +6,8 @@
             <UISeparator />
             <BlockStructureTimetable :blockData="data" />
             <UISeparator />
+            <BlockStructureSports :blockData="data" />
+            <BlockStructureGallery :blockData="data" />
         </div>
     </div>
 </template>

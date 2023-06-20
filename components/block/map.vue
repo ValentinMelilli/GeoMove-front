@@ -17,16 +17,39 @@ import { LControlZoom, LMap, LTileLayer } from "@vue-leaflet/vue-leaflet";
 let map = ref();
 let showModal = ref(false);
 let selectedStructure = ref({});
+let userMarker = ref();
 
 const { data } = await useFetch('/api/structures', { method: 'GET' });
 
 async function createMarkers() {
-    const { marker } = await import('leaflet');
+    const { marker, icon } = await import('leaflet');
 
+    // Create user marker
+    navigator.geolocation.getCurrentPosition((position) => {
+        map?.value?.leafletObject?.flyTo([position.coords.latitude, position.coords.longitude], 15);
+        userMarker.value = marker([position.coords.latitude, position.coords.longitude], {
+            icon: icon({
+                iconUrl: '/tennis-ball.svg',
+                iconSize: [25, 41],
+            })
+        }).addTo(map?.value?.leafletObject).bindTooltip('Vous êtes ici');
+
+        userMarker.value.on('click', function(e: any) {
+            showModal.value = false;
+        });
+    });
+
+    // Update user marker
+    navigator.geolocation.watchPosition((position) => {
+        userMarker.value?.setLatLng([position.coords.latitude, position.coords.longitude]);
+    });
+
+    // Create structures markers
     data?.value?.forEach((structure : any) => {
         const m: any = marker(structure.coord).addTo(map?.value?.leafletObject);
 
         m.on('click', function(e: any) {
+            console.log(map?.value?.leafletObject);
             showModal.value = true;
             selectedStructure.value = structure;
         });

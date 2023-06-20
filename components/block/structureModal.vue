@@ -38,6 +38,7 @@ const sports: any = {
     'Patinage': resolveComponent('IconIceSkate'),
     'Rugby': resolveComponent('IconRugby'),
     'Yoga': resolveComponent('IconYoga'),
+    'Escalade': resolveComponent('IconClimbing'),
 }
 
 const structureSports = computed(() => {

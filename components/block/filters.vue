@@ -17,7 +17,7 @@
                     <input type="text" placeholder="Cours" class="focus:outline-none" />
                 </div>
             </div>
-            <button class="rounded-full bg-white absolute right-20 w-fit flex flex-row py-2 px-6 duration-200 hover:text-primary">
+            <button class="rounded-full bg-white absolute right-20 w-fit flex flex-row py-2 px-6 duration-200 hover:text-primary hover:stroke-primary">
                 <IconControls class="h-6 w-6 mr-4" />
                 Filtres
             </button>

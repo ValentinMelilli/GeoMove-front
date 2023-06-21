@@ -49,7 +49,6 @@ async function createMarkers() {
         const m: any = marker(structure.coord).addTo(map?.value?.leafletObject);
 
         m.on('click', function(e: any) {
-            console.log(map?.value?.leafletObject);
             showModal.value = true;
             selectedStructure.value = structure;
         });

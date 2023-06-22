@@ -6,7 +6,7 @@
                     <IconHeart class="h-6 w-6" />
                 </button>
             </div>
-            <UIProfilePicture :src="props.blockData.image" alt="Profile picture" />
+            <UIProfilePicture :src="profilePicture" alt="Profile picture" />
         </div>
         <div class="grow flex flex-col">
             <h1 class="flex flex-row text-xl">
@@ -38,4 +38,6 @@
 
 <script lang="ts" setup>
 const props = defineProps(["blockData"]);
+
+const profilePicture = props.blockData.profilePicture || '/user.jpg';
 </script>

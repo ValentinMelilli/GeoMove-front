@@ -3,6 +3,7 @@ declare module 'api_response' {
         id?: number
         name: string
         description: string
+        profilePicture?: string
         address: string
         city: string
         zip: number

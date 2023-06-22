@@ -1,9 +1,12 @@
 <template>
     <section class="my-10 text-center">
         <Swiper
-            :slides-per-view="1"
-            :space-between="50"
-            :pagination="{ clickable: true }"
+            :slides-per-view="3"
+            :centeredSlides="true"
+            :pagination="{
+                clickable: true,
+                dynamicBullets: true,
+            }"
             :autoplay="{
                 delay: 2500,
                 disableOnInteraction: false,
@@ -13,7 +16,7 @@
             class="swiper"
         >
             <SwiperSlide v-for="(image, i) in props.blockData.gallery" :key="i">
-                <img :src="image.image" class="w-1/2 h-auto m-auto" />
+                <img :src="image.image" class="w-[200px] h-[200px] rounded-3xl" />
             </SwiperSlide>
         </Swiper>
     </section>

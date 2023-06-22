@@ -7,7 +7,12 @@
             <BlockStructureTimetable :blockData="data" />
             <UISeparator />
             <BlockStructureSports :blockData="data" />
-            <BlockStructureGallery :blockData="data" />
+            <div v-if="data.gallery.length">
+                <UISeparator />
+                <BlockStructureGallery :blockData="data" />
+                <UISeparator />
+                <BlockStructurePictures :blockData="data" />
+            </div>
         </div>
     </div>
 </template>

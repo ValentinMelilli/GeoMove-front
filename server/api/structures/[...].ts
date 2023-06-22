@@ -21,6 +21,7 @@ export default defineEventHandler(async event => {
                 structure = {
                     name: data.name,
                     description: data.description,
+                    profilePicture: data.profilePicture,
                     address: `${data.address}, ${data.zip} ${data.city}`,
                     phone: data.phone,
                     email: data.email,

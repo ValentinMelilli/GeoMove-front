@@ -1,16 +1,16 @@
 <template>
-    <div class="absolute z-[10000] w-1/4">
+    <div class="absolute z-[10000] w-1/5">
         <div class="p-4 w-full bg-accent-2 text-white flex flex-row rounded-t-3xl justify-center">
             {{ props?.blockData?.name }}
-            <button class="ml-4">
-                <IconHeart class="h-6 w-6 stroke-white" />
+            <button class="ml-4 stroke-white duration-100 hover:stroke-primary">
+                <IconHeart class="h-6 w-6" />
             </button>
         </div>
         <div class="p-4 w-full bg-white rounded-b-3xl">
             {{ props?.blockData?.address }}
             <div class="flex flex-row justify-center m-4">
                 <div v-for="(sport, i) in structureSports" class="m-2">
-                    <component :is="sports[sport]" class="h-10 w-10" />
+                    <component :is="sports[sport]" class="h-10 w-10 stroke-black" />
                 </div>
             </div>
             <div class="w-fit mx-auto">

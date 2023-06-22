@@ -2,7 +2,7 @@
     <section class="flex flex-row my-10">
         <div class="mr-[100px]">
             <div class="ml-[6rem]">
-                <button class="absolute">
+                <button class="absolute duration-100 stroke-black hover:stroke-primary">
                     <IconHeart class="h-6 w-6" />
                 </button>
             </div>
@@ -11,11 +11,11 @@
         <div class="grow flex flex-col">
             <h1 class="flex flex-row text-xl">
                 {{ props.blockData.name }}
-                <button class="ml-4">
+                <button class="ml-4 stroke-black duration-200 hover:stroke-primary">
                     <IconMenu class="h-6 w-6" />
                 </button>
             </h1>
-            <a :href="props.blockData.website" target="_blank" class="underline">
+            <a :href="props.blockData.website" target="_blank" class="underline duration-100 hover:text-primary">
                 {{ props.blockData.website }}
             </a>
             <UIRating :rating="props.blockData.rating" />

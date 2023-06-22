@@ -2,9 +2,9 @@
     <svg width="507" height="507" viewBox="0 0 507 507" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M31.6875 63.375H164.775C188.306 63.375 210.874 72.7228 227.513 89.3619C244.152 106.001 253.5 128.569 253.5 152.1V459.469C253.5 441.82 246.489 428.063 234.009 415.583C221.53 403.104 204.604 396.093 186.956 396.093H31.6875V63.375Z"
-            stroke="#1B2933" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+            stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
         <path
             d="M475.312 63.375H342.225C318.694 63.375 296.126 72.7228 279.487 89.3619C262.848 106.001 253.5 128.569 253.5 152.1V459.469C253.5 441.82 260.511 428.063 272.99 415.583C285.47 403.104 302.395 396.093 320.044 396.093H475.312V63.375Z"
-            stroke="#1B2933" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+            stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
 </template>

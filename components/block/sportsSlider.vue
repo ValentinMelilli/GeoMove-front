@@ -6,7 +6,7 @@
         <Swiper :slides-per-view="6" :space-between="50" :pagination="{ clickable: true }" class="swiper">
             <SwiperSlide v-for="(sport, i) in getSports">
                 <button>
-                    <component :is="sports[sport]" class="h-16 w-16" />
+                    <component :is="sports[sport]" class="h-16 w-16 stroke-black" />
                 </button>
             </SwiperSlide>
         </Swiper>

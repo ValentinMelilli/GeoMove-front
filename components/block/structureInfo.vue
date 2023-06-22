@@ -6,7 +6,7 @@
         </div>
         <div class="w-1/3 place-content-end flex flex-wrap">
             <div v-for="(sport, i) in structureSports" class="m-2">
-                <component :is="sports[sport]" class="h-12 w-12" />
+                <component :is="sports[sport]" class="h-12 w-12 stroke-black" />
             </div>
         </div>
     </section>

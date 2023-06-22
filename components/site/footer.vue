@@ -3,13 +3,13 @@
         <div class="flex flex-row">
             <div class="flex flex-row">
                 <a href="#" class="duration-100 hover:text-primary">Foire aux questions</a>
-                <div class="mx-8">•</div>
+                <div class="mx-8 text-white">•</div>
                 <a href="#" class="duration-100 hover:text-primary">Politique de confidentialité</a>
-                <div class="mx-8">•</div>
+                <div class="mx-8 text-white">•</div>
                 <a href="#" class="duration-100 hover:text-primary">Mentions légales</a>
-                <div class="mx-8">•</div>
+                <div class="mx-8 text-white">•</div>
                 <a href="#" class="duration-100 hover:text-primary">Conditions Générales de Vente</a>
-                <div class="mx-8">•</div>
+                <div class="mx-8 text-white">•</div>
                 <a href="#" class="duration-100 hover:text-primary">Conditions Générales d'Utilisation du site</a>
             </div>
             <div class="flex flex-row ml-auto">
@@ -24,7 +24,7 @@
                 </a>
             </div>
         </div>
-        <div class="text-center">
+        <div class="text-center text-xs mt-8">
             &copy; Géo Move - Tous droits réservés
         </div>
     </div>

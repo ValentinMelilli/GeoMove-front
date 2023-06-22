@@ -15,7 +15,7 @@
                     <IconMenu class="h-6 w-6" />
                 </button>
             </h1>
-            <a :href="props.blockData.website" target="_blank" class="underline duration-100 hover:text-primary">
+            <a :href="props.blockData.website" target="_blank" class="underline w-fit duration-100 hover:text-primary">
                 {{ props.blockData.website }}
             </a>
             <UIRating :rating="props.blockData.rating" />
